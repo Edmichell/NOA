@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;600;800&display=swap');
+
+html * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+}
+
+h1 {
+  background-color: blue;
+  background-image: url("banner.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border-top: 4px solid blue;
+  border-bottom: 4px solid blue;
+
+  color: #fff;
+  font-size: 48px;
+  font-weight: 300;
+  padding: 38px 24px;
+  text-shadow: 4px 4px 4px #000;
+}
+
+main.container {
+  width: 50vw;
+  margin: auto;
+}
+
+/* Selecionamos o elemento nav e mudamos seu modo para grid, criando tantas colunas quanto necessárias para todos os items dentro do menu de navegação */
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: 1fr 1fr 1fr; */
+}
+
+/* Selecionamos os anchors dentro da nav para dar as características que desejos aos nosso links */
+nav > a {
+  border-bottom: 4px solid #bbb;
+  color: blue;
+  font-size: 20px;
+  padding: 20px 10px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s; /* permite transições mais suaves de estados */
+}
+
+/* Selecionamos novamente os anchors dentro do nav, mas agora apenas quando o evento de hover acontencer, alterando algumas propriedades do elemento nessa condição */
+nav > a:hover {
+  background-color: yellow;
+  border-bottom: 4px solid blue;
+}
+
+
+img {
+  box-shadow: 4px 4px 4px #424242; /* horizontal, vertial, blur, cor */
+  margin: 24px auto;
+  max-width: 100%;
+}
+
+h2 {
+  border-bottom: 1px solid #ccc;
+  color: blue;
+  font-size: 32px;
+  margin-bottom: 22px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+p > a {
+  color: blue;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+p > a:hover {
+  opacity: 0.8;
+}
+
+p > span {
+  background-color: #424242;
+  padding: 0 4px;
+}
+
+iframe {
+  display: block;
+  max-width: 100%;
+  margin: 24px auto;
+}
+
+footer {
+  background-color: #424242;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 128px;
+  margin-top: 24px;
+}
+
+footer > small {
+  color: #fff;
+  font-size: 28px;
+}
+
+footer > small a {
+  color: blue;
+  text-decoration: none;
+}
+
+footer > small a:hover {
+  text-decoration: line-through;
+}
